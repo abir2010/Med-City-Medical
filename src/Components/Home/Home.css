@@ -1,0 +1,16 @@
+#appointment-btn:hover{
+    background-color: white;
+    color: rgb(40, 219, 157);
+    border: 1px solid rgb(167, 167, 167);
+    transition: background-color 300ms ease-in-out;
+}
+#service-btn:hover{
+    background-color: rgb(80, 228, 176);
+    color: black;
+    border: 0;
+    transition: background-color 300ms ease-in-out;
+}
+#img:hover{
+    transform: scale(1.2);
+    transition: transform 400ms ease-in-out;
+}
