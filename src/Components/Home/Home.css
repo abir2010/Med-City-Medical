@@ -7,7 +7,7 @@
 #service-btn:hover{
     background-color: rgb(80, 228, 176);
     color: black;
-    border: 0;
+    border: 1px solid white;
     transition: background-color 300ms ease-in-out;
 }
 #img:hover{

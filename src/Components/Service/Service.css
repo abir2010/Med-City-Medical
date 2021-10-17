@@ -1,0 +1,10 @@
+#details-btn:hover{
+    color: rgb(23, 62, 146);
+    transition: background-color 300ms ease-in-out;
+}
+.service-card:hover{
+    background-color: rgb(199, 254, 255);
+    border: 1px solid lightgray;
+    box-shadow: 3px 5px 50px rgb(182, 182, 182);
+    transition: background-color 300ms ease-in-out;
+}

@@ -1,30 +1,36 @@
 [
   {
+    "id": 1,
     "name": "Dental Surgery",
     "image": "https://i.ibb.co/7NdzZhh/jonathan-borba-v-2-FRXEba94-unsplash-1.jpg",
-    "des": "Dental surgery is a broad term that refers to a broad range of medical procedures that involves the gums and teeth. These include root canal, implants, and wisdom tooth extraction. Out of the different dental surgery procedures, perhaps the most common is wisdom teeth removal. In this article, we’re going to talk more about removing your wisdom teeth so you can be prepared."
+    "des": "Dental surgery is a broad term that refers to a broad range of medical procedures that involves the gums and teeth. These include root canal, implants, and wisdom tooth extraction. Out of the different dental surgery procedures, perhaps the most common is wisdom teeth removal."
   },
   {
+    "id": 2,
     "name": "Cardiology",
     "image": "https://i.ibb.co/C2dRPvM/Coronavirus-medical-check-up-Doctor-in-protective-mask-using-stethoscope-listening-to-senior-patient.jpg",
     "des": "Cardiology is the study and treatment of disorders of the heart and the blood vessels. A person with heart disease or cardiovascular disease may be referred to a cardiologist.A cardiologist specializes in diagnosing and treating diseases of the cardiovascular system."
   },
   {
+    "id": 3,
     "name": "General Surgery",
     "image": "https://i.ibb.co/spS4Nnh/jafar-ahmed-E285p-Jb-C4u-E-unsplash.jpg",
     "des": "General Surgery is a discipline of surgery having a central core of knowledge embracing anatomy, physiology, metabolism, immunology, nutrition, pathology, wound healing, shock and resuscitation, intensive care, and neoplasia, which are common to all surgical specialties."
   },
   {
+    "id": 4,
     "name": "Neurology",
     "image": "https://i.ibb.co/L5K1GWw/Brain-disease-diagnosis-with-medical-doctor-seeing-Magnetic-Resonance-Imaging-MRI-film-diagnosing-el.jpg",
     "des": "Neurology is the branch of medicine concerned with the study and treatment of disorders of the nervous system. The nervous system is a complex, sophisticated system that regulates and coordinates body activities. It has two major divisions: Central nervous system: the brain and spinal cord."
   },
   {
+    "id": 5,
     "name": "Dermatology",
     "image": "https://i.ibb.co/sRZF0Sf/atikah-akhtar-5-TJ0-Hoy5-FLY-unsplash.jpg",
     "des": "Dermatology is a special area of medicine that focuses on conditions that affect your skin. In addition to your skin, dermatology also includes conditions that affect your nails, hair, and the delicate lining of your eyelids, nose, and mouth. Your skin is your body's largest organ."
   },
   {
+    "id": 6,
     "name": "Labrotory Test",
     "image": "https://i.ibb.co/vs515Q7/Close-up-of-human-hand-organizing-beakers-with-solutions-in-lab-horizontal-composition-selective-foc.jpg",
     "des": "Medical tests can help detect a condition, determine a diagnosis, plan treatment, check to see if treatment is working, or monitor the condition over time. A doctor may order these tests as part of a routine checkup, to check for certain diseases and disorders, or to monitor your health."

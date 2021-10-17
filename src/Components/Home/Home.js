@@ -1,11 +1,15 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import bannerImg from '../../images/banner/banner-img.png';
+import useServices from "../../Hooks/useServices";
+import bannerImg from "../../images/banner/banner-img.png";
+import Service from "../Service/Service";
 import "./Home.css";
 
 const Home = () => {
+  const { services } = useServices();
   return (
     <div>
+      {/* banner-part */}
       <section className="dark:bg-coolGray-800 dark:text-coolGray-100">
         <div className="container flex flex-col justify-center p-6 mx-auto sm:py-12 lg:py-24 lg:flex-row lg:gap-24">
           <div className="flex flex-col justify-center p-6 text-center rounded-sm lg:max-w-md xl:max-w-lg lg:text-left">
@@ -48,7 +52,26 @@ const Home = () => {
           </div>
         </div>
       </section>
-      
+      {/* services-part */}
+      <section className="py-6 dark:bg-coolGray-800 dark:text-coolGray-50">
+        <div className="container mx-auto p-4 sm:p-10">
+          <div className="mb-16 space-y-4 text-center">
+            <p className="px-4 sm:px-8 lg:px-24">What We Do</p>
+            <h1 className="text-4xl font-semibold leading-tight">
+              We Offer Different Services To{" "}
+              <span className="text-green-400">Improve Your Health</span>
+            </h1>
+          </div>
+          <div className="grid max-w-md grid-cols-1 gap-6 mx-auto auto-rows-fr lg:max-w-full lg:gap-2 xl:gap-6 lg:grid-cols-3">
+            {
+                console.log(services),
+                services.map((service) => (
+                <Service key={service.id} service={service}></Service>
+              ))
+            }
+          </div>
+        </div>
+      </section>
     </div>
   );
 };
