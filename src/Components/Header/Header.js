@@ -1,9 +1,11 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
+import useAuth from "../../Hooks/useAuth";
 import headerImg from "../../images/icon/icons8-doctors-bag-50.png";
 import "./Header.css";
 
 const Header = () => {
+  const { user, logOut } = useAuth();
   return (
     <div>
       <header className="p-4 dark:bg-coolGray-800 dark:text-coolGray-100">
@@ -34,7 +36,7 @@ const Header = () => {
             className="flex items-center"
           >
             <img src={headerImg} alt="" />
-            <p className="text-3xl font-bold ml-1 lg:ml-3">
+            <p className="lg:text-3xl font-bold ml-1 lg:ml-3 sm:text-xl">
               <span className="text-green-400">Med</span> - City
             </p>
           </a>
@@ -62,14 +64,38 @@ const Header = () => {
                 className="w-32 py-2 pl-10 text-sm rounded-md sm:w-auto focus:outline-none dark:bg-coolGray-800 dark:text-coolGray-100 focus:dark:bg-coolGray-900"
               />
             </div>
-            <NavLink
-              to="/login"
-              type="button"
-              id="login-btn"
-              className="hidden px-6 py-2 font-semibold rounded bg-green-300 lg:block dark:bg-violet-400 dark:text-coolGray-900"
-            >
-              Log in
-            </NavLink>
+            {user.email ? (
+              <div>
+                <div className="flex justify-btween gap-2">
+                  <img
+                    className="rounded-full"
+                    width="50px"
+                    src={user.photoURL}
+                    alt=""
+                  />
+                  <button
+                    onClick={logOut}
+                    type="button"
+                    id="login-btn"
+                    className="hidden px-6 py-2 font-semibold rounded bg-green-300 lg:block dark:bg-violet-400 dark:text-coolGray-900"
+                  >
+                    Log out
+                  </button>
+                </div>
+                <div>
+                  <p className="text-sm text-left">{user.displayName}</p>
+                </div>
+              </div>
+            ) : (
+              <NavLink
+                to="/login"
+                type="button"
+                id="login-btn"
+                className="hidden px-6 py-2 font-semibold rounded bg-green-300 lg:block dark:bg-violet-400 dark:text-coolGray-900"
+              >
+                Log in
+              </NavLink>
+            )}
           </div>
           <button title="Open menu" type="button" className="p-4 lg:hidden">
             <svg
