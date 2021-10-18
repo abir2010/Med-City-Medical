@@ -1,7 +1,7 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
-import headerImg from '../../images/icon/icons8-doctors-bag-50.png';
-import './Header.css';
+import headerImg from "../../images/icon/icons8-doctors-bag-50.png";
+import "./Header.css";
 
 const Header = () => {
   return (
@@ -10,34 +10,25 @@ const Header = () => {
         <div className="container flex justify-between h-16 mx-auto">
           <ul className="items-stretch hidden space-x-3 lg:flex header-navs font-bold">
             <li className="flex">
-              <NavLink
-                to="/home"
-                className="flex items-center px-4 -mb-1"
-              >
+              <NavLink to="/home" className="flex items-center px-3 -mb-1">
                 Home
               </NavLink>
             </li>
             <li className="flex">
               <NavLink
                 to="/appointment"
-                className="flex items-center px-4 -mb-1"
+                className="flex items-center px-3 -mb-1"
               >
                 Appointment
               </NavLink>
             </li>
             <li className="flex">
-              <NavLink
-                to="/blogs"
-                className="flex items-center px-4 -mb-1"
-              >
+              <NavLink to="/blogs" className="flex items-center px-3 -mb-1">
                 Blogs
               </NavLink>
             </li>
             <li className="flex">
-              <NavLink
-                to="/about"
-                className="flex items-center px-4 -mb-1"
-              >
+              <NavLink to="/about" className="flex items-center px-3 -mb-1">
                 About
               </NavLink>
             </li>
@@ -48,7 +39,9 @@ const Header = () => {
             className="flex items-center"
           >
             <img src={headerImg} alt="" />
-            <p className="text-3xl font-bold ml-1 lg:ml-3"><span className="text-green-400">Med</span> - City</p>
+            <p className="text-3xl font-bold ml-1 lg:ml-3">
+              <span className="text-green-400">Med</span> - City
+            </p>
           </a>
           <div className="flex items-center md:space-x-4">
             <div className="relative">

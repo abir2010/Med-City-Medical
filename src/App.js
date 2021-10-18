@@ -5,7 +5,6 @@ import Home from './Components/Home/Home';
 import Footer from './Components/Footer/Footer';
 import NotFound from './Components/NotFound/NotFound';
 import Login from './Components/Registration/Login/Login';
-import Service from './Components/Service/Service';
 import ServiceDetails from './Components/ServiceDetails/ServiceDetails';
 
 function App() {

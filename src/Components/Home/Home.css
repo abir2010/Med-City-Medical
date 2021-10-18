@@ -14,3 +14,8 @@
     transform: scale(1.2);
     transition: transform 400ms ease-in-out;
 }
+.care-item:hover{
+    box-shadow: 4px 6px 30px gray;
+    transform: scale(1.1);
+    transition: transform 300ms ease-in-out;
+}
