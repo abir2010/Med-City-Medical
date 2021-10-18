@@ -6,6 +6,10 @@ import Footer from './Components/Footer/Footer';
 import NotFound from './Components/NotFound/NotFound';
 import Login from './Components/Registration/Login/Login';
 import ServiceDetails from './Components/ServiceDetails/ServiceDetails';
+import Appointment from './Components/Appoinment/Appointment';
+import Blogs from './Components/Blogs/Blogs';
+import Doctors from './Components/Doctors/Doctors';
+import Register from './Components/Registration/Register/Register';
 
 function App() {
   return (
@@ -22,13 +26,21 @@ function App() {
           <Route path="/service/:serviceId">
             <ServiceDetails></ServiceDetails>
           </Route>
-          <Route path="/appointment"></Route>
-          <Route path="/blogs"></Route>
-          <Route path="/about"></Route>
+          <Route path="/appointment">
+            <Appointment></Appointment>
+          </Route>
+          <Route path="/blogs">
+            <Blogs></Blogs>
+          </Route>
+          <Route path="/doctors">
+            <Doctors></Doctors>
+          </Route>
           <Route path="/login">
             <Login></Login>
           </Route>
-          <Route path="/register"></Route>
+          <Route path="/register">
+            <Register></Register>
+          </Route>
           <Route exact path="*">
             <NotFound></NotFound>
           </Route>

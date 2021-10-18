@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 const Login = () => {
   return (
-    <div className="flex justify-center my-4">
+    <div className="flex justify-center my-20">
       <div className="bg-gray-800 text-white w-full max-w-md p-8 space-y-3 rounded-xl dark:bg-coolGray-900 dark:text-coolGray-100">
         <h1 className="text-2xl font-bold text-center text-green-300">Login</h1>
         <form
