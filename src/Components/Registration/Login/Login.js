@@ -1,9 +1,10 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import useAuth from "../../../Hooks/useAuth";
 
 const Login = () => {
-  const { user, signInWithGoogle, signInUser, logOut } = useAuth();
+  const { user, error, signInWithGoogle, signInUser, logOut } = useAuth();
+  const location = useLocation();
   const [loginEmail, setLoginEmail] = useState("");
   const [loginPass, setLoginPass] = useState("");
   const getLoginEmail = (e) => {
@@ -12,6 +13,9 @@ const Login = () => {
   const getLoginPass = (e) => {
     setLoginPass(e.target.value);
   };
+  const handleGoogleLogIn = () => {
+    
+  }
   return (
     <div className="flex justify-center">
       <div className="text-black w-full max-w-md px-8 py-12 space-y-3 rounded-xl dark:bg-coolGray-900 dark:text-coolGray-100">
@@ -19,14 +23,18 @@ const Login = () => {
           <div className="text-black rounded-md p-2 my-12">
             <div className="max-w-md p-6 dark:bg-coolGray-900 dark:text-coolGray-100">
               <p className="text-xl font-bold text-green-400">Welcome</p>
-              <img
-                src={user?.photoURL}
-                alt=""
-                className="object-cover w-full h-64 pb-6 rounded-sm sm:h-96 dark:bg-coolGray-500"
-              />
+              {user.photoURL ? (
+                <img
+                  src={user?.photoURL}
+                  alt=""
+                  className="object-cover w-full h-64 pb-6 rounded-sm sm:h-96 dark:bg-coolGray-500"
+                />
+              ) : (
+                <div></div>
+              )}
               <div>
                 <h2 className="text-xl font-semibold">{user?.displayName}</h2>
-                <p>{user.email}</p>
+                <p>Email ID: {user.email}</p>
               </div>
             </div>
             <button
@@ -38,6 +46,7 @@ const Login = () => {
           </div>
         ) : (
           <div className="bg-gray-800 w-full max-w-md px-8 py-12 space-y-3 rounded-xl">
+            <p className="text-sm text-red-500">{error}</p>
             <h1 className="text-2xl font-bold text-center text-green-300">
               Login
             </h1>
