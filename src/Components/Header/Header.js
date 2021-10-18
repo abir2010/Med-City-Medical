@@ -23,13 +23,8 @@ const Header = () => {
               </NavLink>
             </li>
             <li className="flex">
-              <NavLink to="/blogs" className="flex items-center px-3 -mb-1">
-                Blogs
-              </NavLink>
-            </li>
-            <li className="flex">
               <NavLink to="/doctors" className="flex items-center px-3 -mb-1">
-                Doctors
+                Doctors Online
               </NavLink>
             </li>
           </ul>
