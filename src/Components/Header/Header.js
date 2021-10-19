@@ -1,16 +1,24 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
+import { useState } from "react/cjs/react.development";
 import useAuth from "../../Hooks/useAuth";
 import headerImg from "../../images/icon/icons8-doctors-bag-50.png";
 import "./Header.css";
 
 const Header = () => {
+  const [click, setClick] = useState(1);
   const { user, logOut } = useAuth();
+
+  const clickHandler = () => {
+    setClick(click + 1);
+  };
+
   return (
     <div>
       <header className="p-4 dark:bg-coolGray-800 dark:text-coolGray-100">
         <div className="container flex justify-between h-16 mx-auto">
-          <ul className="items-stretch hidden space-x-3 lg:flex header-navs font-bold">
+          {/* secondary nav */}
+          <ul className="hidden items-stretch space-x-3 lg:flex header-navs font-bold">
             <li className="flex">
               <NavLink to="/home" className="flex items-center px-3 -mb-1">
                 Home
@@ -35,10 +43,14 @@ const Header = () => {
             aria-label="Back to homepage"
             className="flex items-center"
           >
-            <img src={headerImg} alt="" />
-            <p className="lg:text-3xl font-bold ml-1 lg:ml-3 sm:text-xl">
+            {/* logo */}
+            <div>
+              <img src={headerImg} alt="" />
+            </div>
+            {/* primary-nav */}
+            <div className="hidden sticky md:flex lg:text-3xl font-bold ml-1 lg:ml-3 sm:text-xl">
               <span className="text-green-400">Med</span> - City
-            </p>
+            </div>
           </a>
           <div className="flex items-center md:space-x-4">
             <div className="relative">
@@ -97,24 +109,70 @@ const Header = () => {
               </NavLink>
             )}
           </div>
-          <button title="Open menu" type="button" className="p-4 lg:hidden">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-              className="w-6 h-6 dark:text-coolGray-100"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="2"
-                d="M4 6h16M4 12h16M4 18h16"
-              ></path>
-            </svg>
-          </button>
+          {/* mobile-button */}
+          <div className="md:hidden flex items-center">
+            <button onClick={clickHandler} className="mobile-menu-button">
+              <svg
+                class="block h-6 w-6"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                aria-hidden="true"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M4 6h16M4 12h16M4 18h16"
+                />
+              </svg>
+            </button>
+          </div>
         </div>
       </header>
+      {/* mobile menu */}
+      <div className={click % 2 == 0 ? "block" : "hidden"}>
+        <NavLink
+          to="/home"
+          className="block px-4 py-2 text-sm font-bold hover:bg-gray-200"
+        >
+          Home
+        </NavLink>
+        <NavLink
+          to="/appointment"
+          className="block px-4 py-2 text-sm font-bold hover:bg-gray-200"
+        >
+          Appointment
+        </NavLink>
+        <NavLink
+          to="/doctors"
+          className="block px-4 py-2 text-sm font-bold hover:bg-gray-200"
+        >
+          Doctors Online
+        </NavLink>
+        {user.email ? (
+          <div className="block px-4 py-2 text-sm font-bold hover:bg-gray-200">
+              <button
+                onClick={logOut}
+                type="button"
+                id="login-btn"
+                className=""
+              >
+                Log out
+              </button>
+          </div>
+        ) : (
+          <NavLink
+            to="/login"
+            type="button"
+            id="login-btn"
+            className="block px-4 py-2 text-sm font-bold hover:bg-gray-200"
+          >
+            Log in
+          </NavLink>
+        )}
+      </div>
     </div>
   );
 };
