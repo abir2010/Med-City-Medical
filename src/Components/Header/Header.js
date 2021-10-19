@@ -132,7 +132,7 @@ const Header = () => {
         </div>
       </header>
       {/* mobile menu */}
-      <div className={click % 2 == 0 ? "block" : "hidden"}>
+      <div className={click % 2 == 0 ? "block bg-gray-400" : "hidden"}>
         <NavLink
           to="/home"
           className="block px-4 py-2 text-sm font-bold hover:bg-gray-200"
@@ -157,7 +157,7 @@ const Header = () => {
                 onClick={logOut}
                 type="button"
                 id="login-btn"
-                className=""
+                className="text-sm font-bold"
               >
                 Log out
               </button>
