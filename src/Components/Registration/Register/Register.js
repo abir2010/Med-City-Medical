@@ -4,6 +4,7 @@ import useAuth from "../../../Hooks/useAuth";
 
 const Register = () => {
   const { user, signUpNewUser, logOut } = useAuth();
+  const [userName, setUserName] = useState("");
   const [email, setEmail] = useState("");
   const [pass, setPass] = useState("");
   const getEmail = (e) => {
@@ -12,6 +13,9 @@ const Register = () => {
   const getPass = (e) => {
     setPass(e.target.value);
   };
+  const getName = (e) => {
+    setUserName(e.target.value);
+  }
   return (
     <div className="flex justify-center my-8">
       <div className="flex flex-col w-full max-w-md px-12 py-28 space-y-4 text-center rounded-xl dark:bg-coolGray-900 dark:text-coolGray-100">
@@ -45,11 +49,21 @@ const Register = () => {
               Or start your free trial
             </a>
             <form
-              novalidate=""
+              noValidate=""
               className="space-y-4 ng-untouched ng-pristine ng-valid"
             >
               <div className="flex flex-col">
-                <label for="email" className="sr-only">
+              <label htmlFor="email" className="sr-only">
+                  Name
+                </label>
+                <input
+                  onBlur={getName}
+                  id="name"
+                  type="name"
+                  placeholder="   Your Name"
+                  className="rounded-md mb-4 h-8 dark:border-coolGray-600 dark:bg-coolGray-900 dark:text-coolGray-100 focus:ring-violet-400 focus:dark:border-violet-400 focus:ring-2"
+                />
+                <label htmlFor="email" className="sr-only">
                   Email address
                 </label>
                 <input
@@ -59,7 +73,7 @@ const Register = () => {
                   placeholder="   Email address"
                   className="rounded-md mb-4 h-8 dark:border-coolGray-600 dark:bg-coolGray-900 dark:text-coolGray-100 focus:ring-violet-400 focus:dark:border-violet-400 focus:ring-2"
                 />
-                <label for="password" className="sr-only">
+                <label htmlFor="password" className="sr-only">
                   Password
                 </label>
                 <input
@@ -80,7 +94,7 @@ const Register = () => {
                     className="mr-1 rounded-sm focus:ring-violet-400 focus:dark:border-violet-400 focus:ring-2"
                   />
                   <label
-                    for="remember"
+                    htmlFor="remember"
                     className="text-sm text-white dark:text-coolGray-400"
                   >
                     Remember me
@@ -94,7 +108,7 @@ const Register = () => {
                 </a>
               </div>
               <button
-                onClick={() => signUpNewUser(email, pass)}
+                onClick={() => signUpNewUser(userName, email, pass)}
                 type="button"
                 className="px-8 py-3 space-x-2 bg-green-400 text-black font-semibold rounded dark:bg-violet-400 dark:text-coolGray-900"
               >

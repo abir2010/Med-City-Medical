@@ -48,7 +48,7 @@ const Appointment = () => {
       <div className="flex justify-center">
         <section className="p-6 dark:bg-coolGray-800 dark:text-coolGray-50">
           <form
-            novalidate=""
+            noValidate=""
             action=""
             className="container flex flex-col space-y-12 ng-untouched ng-pristine ng-valid"
           >
@@ -75,7 +75,7 @@ const Appointment = () => {
               </div>
               <div className="grid grid-cols-6 gap-4 col-span-full lg:col-span-3">
                 <div className="col-span-full sm:col-span-3">
-                  <label for="firstname" className="text-sm">
+                  <label htmlFor="firstname" className="text-sm">
                     First name
                   </label>
                   <input
@@ -86,7 +86,7 @@ const Appointment = () => {
                   />
                 </div>
                 <div className="col-span-full sm:col-span-3">
-                  <label for="lastname" className="text-sm">
+                  <label htmlFor="lastname" className="text-sm">
                     Last name
                   </label>
                   <input
@@ -97,7 +97,7 @@ const Appointment = () => {
                   />
                 </div>
                 <div className="col-span-full sm:col-span-3">
-                  <label for="email" className="text-sm">
+                  <label htmlFor="email" className="text-sm">
                     Email
                   </label>
                   <input
@@ -108,7 +108,7 @@ const Appointment = () => {
                   />
                 </div>
                 <div className="col-span-full">
-                  <label for="address" className="text-sm">
+                  <label htmlFor="address" className="text-sm">
                     Address
                   </label>
                   <input
@@ -119,7 +119,7 @@ const Appointment = () => {
                   />
                 </div>
                 <div className="col-span-full sm:col-span-2">
-                  <label for="city" className="text-sm">
+                  <label htmlFor="city" className="text-sm">
                     City
                   </label>
                   <input
@@ -130,7 +130,7 @@ const Appointment = () => {
                   />
                 </div>
                 <div className="col-span-full sm:col-span-2">
-                  <label for="state" className="text-sm">
+                  <label htmlFor="state" className="text-sm">
                     State / Province
                   </label>
                   <input
@@ -141,7 +141,7 @@ const Appointment = () => {
                   />
                 </div>
                 <div className="col-span-full sm:col-span-2">
-                  <label for="zip" className="text-sm">
+                  <label htmlFor="zip" className="text-sm">
                     ZIP / Postal
                   </label>
                   <input

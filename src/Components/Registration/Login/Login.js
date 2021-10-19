@@ -51,13 +51,13 @@ const Login = () => {
               Login
             </h1>
             <form
-              novalidate=""
+              noValidate=""
               action=""
               className="space-y-6 ng-untouched ng-pristine ng-valid"
             >
               <div className="space-y-1 text-sm">
                 <label
-                  for="username"
+                  htmlFor="username"
                   className="block text-white dark:text-coolGray-400"
                 >
                   Username
@@ -73,7 +73,7 @@ const Login = () => {
               </div>
               <div className="space-y-1 text-sm">
                 <label
-                  for="password"
+                  htmlFor="password"
                   className="block text-white dark:text-coolGray-400"
                 >
                   Password
