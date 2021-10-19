@@ -53,16 +53,6 @@ const Register = () => {
               className="space-y-4 ng-untouched ng-pristine ng-valid"
             >
               <div className="flex flex-col">
-              <label htmlFor="email" className="sr-only">
-                  Name
-                </label>
-                <input
-                  onBlur={getName}
-                  id="name"
-                  type="name"
-                  placeholder="   Your Name"
-                  className="rounded-md mb-4 h-8 dark:border-coolGray-600 dark:bg-coolGray-900 dark:text-coolGray-100 focus:ring-violet-400 focus:dark:border-violet-400 focus:ring-2"
-                />
                 <label htmlFor="email" className="sr-only">
                   Email address
                 </label>
@@ -108,7 +98,7 @@ const Register = () => {
                 </a>
               </div>
               <button
-                onClick={() => signUpNewUser(userName, email, pass)}
+                onClick={() => signUpNewUser(email, pass)}
                 type="button"
                 className="px-8 py-3 space-x-2 bg-green-400 text-black font-semibold rounded dark:bg-violet-400 dark:text-coolGray-900"
               >

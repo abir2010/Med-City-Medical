@@ -7,7 +7,6 @@ import {
   signInWithEmailAndPassword,
   sendEmailVerification,
   onAuthStateChanged,
-  updateProfile,
   signOut
 } from "firebase/auth";
 import initAuth from "../Firebase/firebase.init";
@@ -38,14 +37,12 @@ const useFirebase = () => {
       .finally(()=>setIsLoading(false));
   };
 
-  const signUpNewUser = (name,email,password) => {
-    console.log(name,email,password);
+  const signUpNewUser = (email,password) => {
     setIsLoading(true);
     createUserWithEmailAndPassword(auth, email, password)
     .then((userCredential) => {
       // Signed in 
       const user = userCredential.user;
-      user.displayName = `${name}`;
       setUser(user);
       setError("");
       verifyEmailId();
