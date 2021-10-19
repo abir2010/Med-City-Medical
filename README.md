@@ -1,3 +1,14 @@
+# Med-City Medical Center Project
+
+Live site link goes here [Click here](https://med-city.web.app).
+
+* This project is all about medical center care service through online.
+* Med-City medical center is like a online clinic for those people who are in emergency.
+* One can get all the medical care at anytime through this online platform.
+* This project is based on React and React-Router.
+* Firebase Authentication has been used for the specific people to get service.
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
